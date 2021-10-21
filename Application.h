@@ -26,6 +26,7 @@ public:
 	ModuleWindow* window;
 	ModuleTextures* textures;
 	ModuleInput* input;
+	ModuleScene* scene;
 
 private:
 
