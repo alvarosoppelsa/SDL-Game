@@ -34,6 +34,7 @@
     <ClInclude Include="Globals.h">
       <Filter>Main</Filter>
     </ClInclude>
+    <ClInclude Include="ModuleScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -56,6 +57,9 @@
     </ClCompile>
     <ClCompile Include="log.cpp">
       <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleScene.cpp">
+      <Filter>Main</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

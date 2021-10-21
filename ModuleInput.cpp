@@ -23,6 +23,9 @@ bool ModuleInput::Init()
 		ret = false;
 	}
 
+	// This pointer does not change in app lifetime
+	keyboard = SDL_GetKeyboardState(NULL);
+
 	return ret;
 }
 
@@ -30,8 +33,6 @@ bool ModuleInput::Init()
 update_status ModuleInput::PreUpdate()
 {
 	SDL_PumpEvents();
-
-	keyboard = SDL_GetKeyboardState(NULL);
 
 	if (keyboard[SDL_SCANCODE_ESCAPE])
 	{

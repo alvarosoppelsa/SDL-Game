@@ -4,6 +4,7 @@
 #include "ModuleRender.h"
 #include "ModuleTextures.h"
 #include "ModuleInput.h"
+#include "ModuleScene.h"
 
 using namespace std;
 
@@ -14,6 +15,7 @@ Application::Application()
 	modules.push_back(renderer = new ModuleRender());
 	modules.push_back(textures = new ModuleTextures());
 	modules.push_back(input = new ModuleInput());
+	modules.push_back(input = new ModuleScene());
 
 	// TODO 7: Create a new "scene" module that loads a texture and draws it on the screen
 
@@ -22,10 +24,8 @@ Application::Application()
 Application::~Application()
 {
 	// TODO 6: Free module memory. We should remove all App memory on close.
-	for each (Module* mod in modules)
-	{
-		delete mod;
-	} 
+	for (list<Module*>::reverse_iterator it = modules.rbegin(); it != modules.rend(); ++it)
+		delete *it;
 }
 
 bool Application::Init()
