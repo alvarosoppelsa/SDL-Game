@@ -23,7 +23,6 @@ Application::Application()
 
 Application::~Application()
 {
-	// TODO 6: Free module memory. We should remove all App memory on close.
 	for (list<Module*>::reverse_iterator it = modules.rbegin(); it != modules.rend(); ++it)
 		delete *it;
 }

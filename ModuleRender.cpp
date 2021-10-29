@@ -39,10 +39,6 @@ update_status ModuleRender::PreUpdate()
 {
 	SDL_RenderClear(renderer);
 
-	if (!texture)
-	{
-		texture = App->textures->Load();
-	}
 	return UPDATE_CONTINUE;
 }
 
